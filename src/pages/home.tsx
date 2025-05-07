@@ -59,6 +59,10 @@ export default function Home() {
               type="button"
               className="fill:rdx-blue-100 bg:rdx-blue-40 p:2x r:8 cursor:pointer transform:scale(0.9):active flex:1|1|0 min-w:max-content flex ai:center jc:center"
               onClick={() => {
+                if (sidePrice === 0) {
+                  const allowed = confirm("مطمئنی؟")
+                  if (!allowed) return
+                }
                 setPrice(sidePrice)
                 setSidePrice(0)
               }}
