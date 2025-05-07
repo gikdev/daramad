@@ -1,4 +1,4 @@
-import { CircleDashed, House, Minus, Plus, Prohibit } from "@phosphor-icons/react"
+import { CircleDashed, ArrowClockwise, House, Minus, Plus, Prohibit } from "@phosphor-icons/react"
 import { useState } from "react"
 import { Link } from "react-router"
 // import * as rdx from "#/assets/radix-colors-dark"
@@ -14,31 +14,6 @@ export default function Home() {
 
   return (
     <div className="min-h:100dvh flex flex-direction:column">
-      {/* <nav className="bg:rdx-slate-20 flex jc:space-between border-bottom:1 border:rdx-slate-60">
-        <button
-          type="button"
-          onClick={() => history.back()}
-          className="cursor:not-allowed flex ai:center jc:center h:12x px:3x text:rdx-slate-110"
-        >
-          <ArrowRight size={24} color={rdx.slate[100]} />
-        </button>
-
-        <Link
-          className="h:12x px:3x font:bold text:rdx-slate-120:hover flex ai:center jc:center font-size:large"
-          to="/"
-        >
-          درآمد
-        </Link>
-
-        <button
-          type="button"
-          onClick={() => history.back()}
-          className="cursor:not-allowed flex ai:center jc:center h:12x px:3x text:rdx-slate-110"
-        >
-          <List size={24} color={rdx.slate[100]} />
-        </button>
-      </nav> */}
-
       <main className="flex:1|1|0 p:5x flex flex-direction:column gap:3x ai:center">
         <h1 className="text:center text:rdx-slate-120 font-size:x-large font-weight:900">
           مدیریت بودجه
@@ -78,6 +53,17 @@ export default function Home() {
               }}
             >
               <Plus size={32} className="fill:inherit" />
+            </button>
+
+            <button
+              type="button"
+              className="fill:rdx-blue-100 bg:rdx-blue-40 p:2x r:8 cursor:pointer transform:scale(0.9):active flex:1|1|0 min-w:max-content flex ai:center jc:center"
+              onClick={() => {
+                setPrice(sidePrice)
+                setSidePrice(0)
+              }}
+            >
+              <ArrowClockwise size={32} className="fill:inherit" />
             </button>
 
             <button
